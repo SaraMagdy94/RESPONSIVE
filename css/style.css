@@ -1,0 +1,375 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+:root{
+    --gray:#9a9a9a;
+    --white:#fff;
+    --blue:#2db4e1;
+}
+
+/* nav */
+
+nav {
+    background-color: #303b4f;
+}
+.toggle{
+    order: 2;
+    line-height: 73px;
+    padding: 0 20px;
+}
+.toggle a{
+    color: var(--white);
+}
+.item {
+    display: none;
+}
+.item.active {
+    display: block;
+}
+.cont .logo{
+    order: 1;
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;  
+    text-align: center;
+
+}
+nav .cont {
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu ul li:last-of-type {
+    margin-bottom: 20px;
+}
+.menu ul li a {
+    color: var(--white);
+    border-bottom: 2px solid #26827b;
+    padding-bottom: 5px;
+}
+
+.menu ul li a:hover {
+    color: #1fb99d;
+    transition: ease 1s;
+}
+
+.logo img {
+    height: 73px;
+}
+.l-t{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+/* setting */
+
+.setting .cont {
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding: 0 10px;
+    text-align: center;
+    color:var( --gray) ;
+}
+
+.setting .cont i {
+    font-size: 50px;
+}
+
+.setting .cont h1 {
+    padding: 25px 0 15px 0px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.setting .cont p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.setting .cont button {
+    margin: 16px 0 0 0;
+    border: none;
+    background-color: #d4d4d4;
+    color: var(--white);
+    padding: 5px 10px;
+    margin-bottom: 25px;
+}
+.set-one,
+.set-two,
+.set-three,
+.set-four {
+    margin-bottom: 50px;  
+}
+/* product */
+
+.product {
+    background-color: var(--blue);
+}
+
+.product .cont {
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: 60px 0;
+}
+
+.product .cont h1 {
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+.product .cont p {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    font-size: 13px;
+
+}
+
+.product .img-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product .img-product img {
+    margin-bottom: 20px;
+}
+/* section nulla  */
+.nulla .cont{
+    align-items: center;
+    justify-content: space-between;
+    padding: 55px 0 ;
+}
+.quis,.img-quic,.don,.img-don{
+    width: 100%;
+}
+.don,.img-don{
+    margin-top: 50px;
+}
+.nulla .cont p{
+    padding: 20px 0;
+    color: var(--gray);
+
+}
+.nulla .cont button{
+    padding: 10px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #1a66a4;
+    color: var(--white);
+    font-size: 13px;
+    margin-bottom: 50px;
+
+}
+.quis{
+    order: 2;
+}
+.img-quic{
+order: 1;
+margin-bottom: 50px;
+
+}
+.img-don{
+order: 3;
+
+}
+.don{
+order: 4;
+
+}
+/*  */
+/* media query */
+
+@media(min-width:768px) {
+     
+    .setting .cont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+    .set-one,
+    .set-two,
+    .set-three,
+    .set-four {
+        width: 45%;
+    }
+    .set-three,
+    .set-four{
+        margin-top: 50px;
+    }
+    .product .img-product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .product .img-product img {
+        width: 48%;
+        /* margin-left: 10px; */
+    }
+    .product .img-product img:last-of-type {
+        display: none;
+    }
+    .product .cont p {
+        font-size: 15px;
+    }
+    .product .cont h1 {
+        padding-bottom: 15px;
+        font-size: 30px;
+    }
+    .nulla .cont{
+        text-align: center;
+    }
+  
+    .nulla .cont p {
+    font-size: 13px;
+}
+
+}
+
+@media (min-width:992px) {
+    .item {
+        display: block;
+    }
+     
+    .toggle {
+        display: none;
+    }
+    nav .cont,
+    .setting .cont,
+    .product .img-product,
+    .nulla .cont {
+        flex-direction: row;
+        width: 800px;
+    }
+    .menu ul li {
+        border-bottom: none;
+    }
+    .menu ul li:last-of-type {
+        margin-bottom: 0;
+    }
+    .setting .cont{
+        padding: 0 ;
+
+    }
+    .menu ul li a {
+        border-bottom: none;
+    }
+    .menu ul {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    .menu {
+        align-self: flex-start;
+        padding-top: 20px;
+    }
+    .menu ul li a {
+        padding: 10px 15px;
+    }
+    .menu ul li {
+        padding: 0;
+    }
+    .set-one,
+    .set-two,
+    .set-three,
+    .set-four {
+        width: 25%;
+    }
+    .set-three,
+    .set-four{
+        margin-top: 0;
+    }
+    .product .cont {
+        padding: 60px;
+    }
+    .product .img-product {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+    .product .img-product img {
+        width: 19.7%;
+
+    }
+    /*  */
+    .nulla .cont{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    .quis,.img-quic,.don,.img-don{
+        width: 48%;
+    }
+    .img-quic img,.img-don img{
+        width: 390px;
+    }
+    .product .img-product img:last-of-type {
+        display: block;
+    }
+    .quis{
+    order: 1;
+}
+    .img-quic{
+        order: 2;
+    }
+    .img-don{
+        order: 3;
+    }
+    .don{
+        order: 4;
+    }
+}
+
+@media (min-width:1200px) {
+    nav .cont,
+    .setting .cont,
+    .product .img-product,
+    .nulla .cont {
+        width: 870px;
+    }
+    .menu ul li a {
+        padding: 10px 20px;
+    }
+    .menu ul li {
+        padding: 0;
+    }
+    .setting .cont {
+        display: flex;
+        flex-direction: row;
+    }
+}
